@@ -1,0 +1,94 @@
+/* ==================== CUSTOM STYLES ==================== */
+
+:root {
+    --primary-green: #22c55e;
+    --dark-bg: #0f172a;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--dark-bg);
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--slate-800);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #16a34a;
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Progress bars animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    backdrop-filter: blur(5px);
+}
+
+/* Glow effect for important elements */
+.glow {
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+/* Text gradients */
+.text-gradient-green {
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input styling */
+input {
+    background-color: var(--slate-800);
+    border: 1px solid var(--slate-700);
+    color: #e2e8f0;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
